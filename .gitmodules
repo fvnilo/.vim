@@ -1,0 +1,21 @@
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/lightline.vim"]
+	path = bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "vim-colorschemes"]
+	path = vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "bundle/colorschemes"]
+	path = bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "bundle/auto-pairs"]
+	path = bundle/auto-pairs
+	url = git://github.com/jiangmiao/auto-pairs.git
