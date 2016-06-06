@@ -6,7 +6,7 @@ There is no prerequisites per se but a look at any updates on [vim-pathogen](htt
 
 ## Install
 
-		git clone https://github.com/nylo-andry/.vim.git ~/.vim
+		git clone --recursive https://github.com/nylo-andry/.vim.git ~/.vim
 		ln -s ~/.vim/vimrc ~/.vimrc
 		vim
 
