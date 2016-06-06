@@ -8,6 +8,7 @@ There is no prerequisites per se but a look at any updates on [vim-pathogen](htt
 
 		git clone https://github.com/nylo-andry/.vim.git ~/.vim
 		vim
+		ln -s ~/.vim/vimrc ~/.vimrc
 
 When `vim` is opened, run `Helptags`.
 
