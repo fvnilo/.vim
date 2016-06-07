@@ -7,6 +7,7 @@ set nowrap " do not wrap lines
 set tabstop=2 shiftwidth=2 " tabs are 2 spaces
 set backspace=indent,eol,start
 set encoding=utf-8 " encoding
+set clipboard+=unnamed " use system clipboard
 filetype plugin indent on " load filetype plugins
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " do not auto add coments
 
