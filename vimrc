@@ -46,5 +46,6 @@ let g:lightline = {
 "" NERDTree
 " map Ctrl-N to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 syntax on
