@@ -49,4 +49,8 @@ let g:lightline = {
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Map F2 to Format JSON files
+"" Thanks to: https://github.com/floranf/"
+map <F2> :%!python -mjson.tool<CR>
+
 syntax on
