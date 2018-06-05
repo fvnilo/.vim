@@ -25,3 +25,4 @@ When `vim` is opened, run `Helptags`.
 - [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 - [vim-easymotion](https://github.com/easymotion/vim-easymotion)
+- [vim-go](https://github.com/fatih/vim-go)
