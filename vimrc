@@ -49,6 +49,12 @@ let g:lightline = {
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+"" Map Ctrl + hjkl to switch buffers easily
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
 " Map F2 to Format JSON files
 "" Thanks to: https://github.com/floranf/"
 map <F2> :%!python -mjson.tool<CR>
