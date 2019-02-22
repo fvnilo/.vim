@@ -19,6 +19,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fatih/vim-go'
 call vundle#end()
 
+filetype plugin indent on
+
 "" Searching
 set hlsearch " highlight matches
 set incsearch " incremental searching
