@@ -4,10 +4,10 @@
 ## Install
 
 	git clone https://github.com/nylo-andry/.vim.git ~/.vim
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	ln -s ~/.vim/vimrc ~/.vimrc
 	vim
-  :PluginInstall
+	:PluginInstall
 
 ## Plugins 
 
