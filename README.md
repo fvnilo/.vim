@@ -1,5 +1,5 @@
 # .vim
-> My vim coniguration.
+> My vim configuration.
 
 ## Install
 
