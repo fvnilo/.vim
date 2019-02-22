@@ -1,15 +1,23 @@
-"" Activate Pathogen
-execute pathogen#infect()
-
 "" Text editing
 set number " line numbers
 set nowrap " do not wrap lines
 set tabstop=2 shiftwidth=2 " tabs are 2 spaces
 set backspace=indent,eol,start
 set encoding=utf-8 " encoding
-set clipboard+=unnamed " use system clipboard
-filetype plugin indent on " load filetype plugins
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " do not auto add coments
+set clipboard=unnamed " use system clipboard
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'itchyny/lightline.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'fatih/vim-go'
+call vundle#end()
 
 "" Searching
 set hlsearch " highlight matches
@@ -20,9 +28,6 @@ set smartcase " ... unless they contain at least one capital letter
 "" Color scheme
 colorscheme hybrid 
 set t_Co=256
-
-"" Syntax
-let g:javascript_enable_domhtmlcss = 1
 
 "" lightline
 set laststatus=2
@@ -43,11 +48,6 @@ let g:lightline = {
       \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
       \ },
       \}
-
-"" NERDTree
-" map Ctrl-N to toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "" Map Ctrl + hjkl to switch buffers easily
 map <C-j> <C-W>j
