@@ -1,6 +1,5 @@
 "" Text editing
 set number " line numbers
-set nowrap " do not wrap lines
 set tabstop=2 shiftwidth=2 " tabs are 2 spaces
 set backspace=indent,eol,start
 set encoding=utf-8 " encoding
@@ -17,6 +16,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'itchyny/lightline.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 
 filetype plugin indent on
@@ -60,5 +60,14 @@ map <C-l> <C-W>l
 " Map F2 to Format JSON files
 "" Thanks to: https://github.com/floranf/"
 map <F2> :%!python -mjson.tool<CR>
+
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Disable arrows
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 syntax on
