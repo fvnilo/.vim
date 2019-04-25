@@ -13,9 +13,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'itchyny/lightline.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 call vundle#end()
 
@@ -28,28 +30,8 @@ set ignorecase " searches are case insensitive...
 set smartcase " ... unless they contain at least one capital letter
 
 "" Color scheme
-colorscheme hybrid 
+colorscheme zenburn 
 set t_Co=256
-
-"" lightline
-set laststatus=2
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"Read-only":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \}
 
 "" Map Ctrl + hjkl to switch buffers easily
 map <C-j> <C-W>j
@@ -63,6 +45,13 @@ map <F2> :%!python -mjson.tool<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" vim-go goodies
+let g:go_fmt_command = "goimports"    " Run goimports along gofmt on each save     
+let g:go_auto_type_info = 1           " Automatically get signature/type info for object under cursor     
+
+" vim-airline
+let g:airline_theme='zenburn'
 
 " Disable arrows
 noremap <Up> <Nop>
