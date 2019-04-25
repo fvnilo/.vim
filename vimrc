@@ -52,6 +52,7 @@ let g:go_auto_type_info = 1           " Automatically get signature/type info fo
 
 " vim-airline
 let g:airline_theme='zenburn'
+let g:airline_powerline_fonts = 1
 
 " Disable arrows
 noremap <Up> <Nop>
