@@ -34,17 +34,11 @@ set smartcase " ... unless they contain at least one capital letter
 colorscheme zenburn 
 set t_Co=256
 
-"" Map Ctrl + hjkl to switch buffers easily
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
 " Map F2 to Format JSON files
 "" Thanks to: https://github.com/floranf/"
 map <F2> :%!python -mjson.tool<CR>
 
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeTabsToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " vim-go goodies
